@@ -1,1 +1,62 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraki Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Added Google Font -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Home -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Meraki Cafe</h1>
+            <p>"A latte love for this cozy corner"</p>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu">
+                <h3>Drinks</h3>
+                <p>Americano</p>
+            </div>
+            <div class="menu">
+                <h3>Snacks</h3>
+                <p>Fries</p>
+            </div>
+            <div class="menu">
+                <h3>Meals</h3>
+                <p>Beef Stew</p>
+            </div>
+            <div class="menu">
+                <h3>Pasta</h3>
+                <p>Lasagna</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts for Flip Effect -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        sections.forEach((section) => {
+            section.classList.add('flip-transition');
+        });
+    </script>
+</body>
+</html>
+

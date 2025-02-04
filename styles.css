@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Home Section */
+.home {
+    background-image: url('https://img.freepik.com/premium-photo/white-coffee-cup-roasted-coffee-beans-around_35570-794.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.home-content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.home-content p {
+    font-style: italic;
+    font-size: 1.5em;
+    color: white;
+}
+
+/* Navigation */
+nav {
+    background-color: #3f2003;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+/* Menu Section */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    transition: transform 1s ease-in-out;
+}
+
+#menu {
+    background-color: #ffffff;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #6b4808;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.menu {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.menu h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #5e1414;
+}
+
+.menu p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Flip Effect for Sections */
+.flip-transition {
+    transform: rotateY(0);
+    transition: transform 1s ease-in-out;
+}
+
+section:hover {
+    transform: rotateY(180deg);
+}
+

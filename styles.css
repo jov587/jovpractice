@@ -13,12 +13,32 @@ body {
 }
 
 /* Home Section */
-.home {
+.section {
+    display: none; /* Hide all sections initially */
+    padding: 40px 20px;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0; /* Make sections invisible */
+    transition: opacity 0.5s ease-in-out; /* Fade effect */
+}
+
+/* Display section when it is the target */
+:target {
+    display: block;
+    opacity: 1; /* Fade in the target section */
+}
+
+#home {
     background-image: url('https://img.freepik.com/premium-photo/white-coffee-cup-roasted-coffee-beans-around_35570-794.jpg');
     background-size: cover;
     background-position: center;
     color: rgb(0, 0, 0);
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,12 +90,6 @@ nav {
 }
 
 /* Menu Section */
-.section {
-    padding: 40px 20px;
-    text-align: center;
-    transition: transform 1s ease-in-out;
-}
-
 #menu {
     background-color: #ffffff;
 }
@@ -114,13 +128,11 @@ h2 {
     color: #555;
 }
 
-/* Flip Effect for Sections */
-.flip-transition {
-    transform: rotateY(0);
-    transition: transform 1s ease-in-out;
+/* Services Section */
+#services {
+    background-color: #ffffff;
 }
 
-section:hover {
-    transform: rotateY(180deg);
+#contact {
+    background-color: #f9f9f9;
 }
-

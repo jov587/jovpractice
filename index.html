@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meraki Cafe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Added Google Font -->
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Home -->
-    <section id="home" class="home">
+    <!-- Home Section -->
+    <section id="home" class="section">
         <div class="home-content">
             <h1>Meraki Cafe</h1>
             <p>"A latte love for this cozy corner"</p>
@@ -50,13 +50,17 @@
         </div>
     </section>
 
-    <!-- Scripts for Flip Effect -->
-    <script>
-        const sections = document.querySelectorAll('section');
-        sections.forEach((section) => {
-            section.classList.add('flip-transition');
-        });
-    </script>
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <p> Catering, Pickup, and more...</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p> For inquiries, reach out to us at: jcb4930@students.uc-bcf.edu.ph </p>
+    </section>
+
 </body>
 </html>
-

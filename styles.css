@@ -14,23 +14,10 @@ body {
 
 /* Home Section */
 .section {
-    display: none; /* Hide all sections initially */
     padding: 40px 20px;
     text-align: center;
-    height: 100vh; /* Full screen height */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0; /* Make sections invisible */
-    transition: opacity 0.5s ease-in-out; /* Fade effect */
-}
-
-/* Display section when it is the target */
-:target {
-    display: block;
-    opacity: 1; /* Fade in the target section */
+    min-height: 100vh; 
+    display: none;
 }
 
 #home {
@@ -46,16 +33,41 @@ body {
     position: relative;
 }
 
+/* Make visible when targeted */
+:target {
+    display: block;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #8a4c20; /* Coffee Brown */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.cta-button:hover {
+    background-color: #ffb300; /* Lighter Brown */
+    transform: scale(1.05);
+}
+
 .home-content h1 {
     font-size: 4em;
     margin-bottom: 20px;
-    color: white;
+    color: rgb(55, 25, 4);
 }
 
 .home-content p {
     font-style: italic;
     font-size: 1.5em;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Navigation */
@@ -92,6 +104,8 @@ nav {
 /* Menu Section */
 #menu {
     background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 h2 {
@@ -100,39 +114,149 @@ h2 {
     color: #6b4808;
 }
 
+/* Grid layout for menu categories */
 .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
+/* Individual category (Drinks, Meals, Desserts) */
 .menu {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 200px;
     text-align: center;
 }
 
+/* Menu Title */
 .menu h3 {
-    font-size: 1.6em;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
     color: #5e1414;
 }
 
-.menu p {
-    font-size: 1.2em;
-    color: #555;
+/* Grid for menu items */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Individual menu item */
+.menu-item {
+    text-align: center;
+}
+
+.menu-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
 /* Services Section */
 #services {
     background-color: #ffffff;
+    padding: 50px 20px;
 }
 
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #6b4808;
+    text-align: center;
+}
+
+/* Services Grid */
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 23px; /* Reduced gap for items */
+    flex-wrap: wrap;
+}
+
+/* Service Item */
+.service-item {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.service-item p {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Contact Section */
 #contact {
     background-color: #f9f9f9;
+    padding: 50px 20px;
 }
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #6b4808;
+    text-align: center;
+}
+
+/* Contact Grid Layout */
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #6b4808;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #8a4c20;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #ff6347;
+}
+
+

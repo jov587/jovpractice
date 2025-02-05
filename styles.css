@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lora', serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -21,7 +21,7 @@ body {
 }
 
 #home {
-    background-image: url('https://img.freepik.com/premium-photo/white-coffee-cup-roasted-coffee-beans-around_35570-794.jpg');
+    background-image: url('home.jpg');
     background-size: cover;
     background-position: center;
     color: rgb(0, 0, 0);
@@ -33,7 +33,6 @@ body {
     position: relative;
 }
 
-/* Make visible when targeted */
 :target {
     display: block;
 }
@@ -47,27 +46,33 @@ body {
     font-weight: bold;
     text-decoration: none;
     color: white;
-    background-color: #8a4c20; /* Coffee Brown */
+    background-color: #5f3505; /* Coffee Brown */
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Hover Effect */
 .cta-button:hover {
-    background-color: #ffb300; /* Lighter Brown */
+    background-color: #b9690e; /* Lighter Brown #5f3505 */
     transform: scale(1.05);
 }
 
 .home-content h1 {
     font-size: 4em;
     margin-bottom: 20px;
-    color: rgb(55, 25, 4);
+    color: rgb(107, 47, 4);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.2),  
+        0px 0px 8px rgba(255, 255, 255, 0.7);  
 }
 
 .home-content p {
     font-style: italic;
     font-size: 1.5em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.2), 
+        0px 0px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* Navigation */
@@ -123,9 +128,20 @@ h2 {
     margin: 0 auto;
 }
 
-/* Individual category (Drinks, Meals, Desserts) */
+/* Individual category (Drinks, Meals) */
 .menu {
     text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.drinks {
+    background-color: #f1e0c6; /* Light coffee color for Drinks */
+}
+
+.meals {
+    background-color: #e7f4e9; /* Soft green color for Meals */
 }
 
 /* Menu Title */
@@ -163,6 +179,7 @@ h2 {
     font-weight: bold;
     color: #333;
 }
+
 /* Services Section */
 #services {
     background-color: #ffffff;
@@ -235,7 +252,7 @@ h2 {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(112, 47, 3, 0.1);
 }
 
 .contact-info h3 {
@@ -259,4 +276,120 @@ h2 {
     color: #ff6347;
 }
 
+/* Mobile responsiveness using media queries */
 
+/* Adjustments for small screens (mobile devices) */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Home Section */
+    #home {
+        background-position: top center;
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .home-content h1 {
+        font-size: 2.5em;
+    }
+
+    .home-content p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    /* Menu Section */
+    #menu h2 {
+        font-size: 2em;
+    }
+
+    .menu-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr; /* Stack menu items in a single column */
+    }
+
+    /* Services Section */
+    .services-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info {
+        flex: 1;
+        padding: 20px;
+    }
+}
+
+/* Adjustments for extra-small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    /* Home Section */
+    .home-content h1 {
+        font-size: 2em;
+    }
+
+    .home-content p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    /* Menu Section */
+    #menu h2 {
+        font-size: 1.8em;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+    }
+
+    /* Services Section */
+    .services-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .service-item {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-info {
+        padding: 15px;
+    }
+}
